@@ -127,7 +127,7 @@ var graphCmd = &cobra.Command{
 			utils.CreateDirectory(c.Dir.LabGraph, 0755)
 
 			// create graph filename
-			jsonfile := c.Dir.LabGraph + "/" + c.GetTopoName(topo) + ".json"
+			jsonfile := c.Dir.LabGraph + "/" + c.Config.Name + ".json"
 			utils.CreateFile(jsonfile, string(b))
 			log.Infof("Created %s", jsonfile)
 			return nil
